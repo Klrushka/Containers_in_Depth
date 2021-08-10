@@ -1,6 +1,8 @@
+import task11.ClassWithPQueue;
 import task3.Sets;
 import task7.ArrayAndLikedList;
 
+import java.util.Objects;
 import java.util.Set;
 
 public class Main {
@@ -58,31 +60,26 @@ public class Main {
 
 
         /*
-
+        Exercise 11: (2) Create a class that contains an Integer that is initialized to a value
+        between o and 100 using java.util.Random. Implement Comparable using this Integer
+        field. Fill a PriorityQueue with objects of your class, and extract the values using poll( ) to
+        show that it produces the expected order
          */
 
 
+        ClassWithPQueue classWithPQueue = new ClassWithPQueue();
+
+        classWithPQueue.fillQueue(10);
+
+        for (int i = 0; i < 10; i++)
+            System.out.print(Objects.requireNonNull(classWithPQueue.getIntegers().poll()) + " ");
 
 
 
 
+        /*
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+         */
 
     }
 }
