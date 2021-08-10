@@ -25,6 +25,17 @@ public class Sets {
         set.addAll(ORIGINAL_LINKED_HASH_SET);
     }
 
+
+    public static List<String> names(int n) {
+        List<String> names = new LinkedList<>();
+
+        for (int i = 0; i < n; i++) {
+            names.add(Countries.DATA[i][0] + " " + Countries.DATA[i][1]);
+        }
+        return names;
+    }
+
+
     public Set<String> getHashSet() {
         return hashSet;
     }
