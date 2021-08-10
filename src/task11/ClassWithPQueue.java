@@ -13,7 +13,6 @@ public class ClassWithPQueue implements Comparable<ClassWithPQueue> {
         }
     }
 
-
     @Override
     public int compareTo(ClassWithPQueue o) {
         if (integer > o.integer) {
