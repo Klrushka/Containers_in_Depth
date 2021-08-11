@@ -3,10 +3,8 @@ import task27.CountedString;
 import task3.Sets;
 import task7.ArrayAndLikedList;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.sql.Time;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -111,8 +109,18 @@ public class Main {
 
 
         /*
-
+        Exercise 30: (3) Compare the performance of Collections.sort( ) between an
+        ArrayList and a LinkedList.
          */
+
+        Comparing comparing = new Comparing();
+
+        comparing.compare(100);
+        comparing.compare(1000);
+        comparing.compare(10000);
+        comparing.compare(100000);
+        comparing.compare(1000000);
+        // ArrayList faster
 
 
     }
