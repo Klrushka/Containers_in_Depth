@@ -1,7 +1,10 @@
 import task11.ClassWithPQueue;
+import task27.CountedString;
 import task3.Sets;
 import task7.ArrayAndLikedList;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
@@ -75,11 +78,42 @@ public class Main {
             System.out.print(Objects.requireNonNull(classWithPQueue.getIntegers().poll()) + " ");
 
 
+        System.out.println();
+
+
+        /*
+        Exercise 27: (3) Modify the hashCode( ) in CountedString.java by removing the
+        combination with id, and demonstrate that CountedString still works as a key. What is the
+        problem with this approach?
+         */
+
+
+        Map<CountedString, Integer> map = new HashMap<CountedString, Integer>();
+        CountedString[] cs = new CountedString[5];
+        for (int i = 0; i < cs.length; i++) {
+            cs[i] = new CountedString("hi");
+            map.put(cs[i], i);
+        }
+        System.out.println(map);
+        for (CountedString cstring : cs) {
+            System.out.println("Looking up " + cstring);
+            System.out.println(map.get(cstring));
+
+
+        }
+
+        /*
+        What is the problem with this approach? We have same hashCodes
+         */
+
+
+        System.out.println();
 
 
         /*
 
          */
+
 
     }
 }
