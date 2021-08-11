@@ -1,9 +1,9 @@
 import task11.ClassWithPQueue;
 import task27.CountedString;
 import task3.Sets;
+import task30.Comparing;
 import task7.ArrayAndLikedList;
 
-import java.sql.Time;
 import java.util.*;
 
 public class Main {
@@ -120,7 +120,7 @@ public class Main {
         comparing.compare(10000);
         comparing.compare(100000);
         comparing.compare(1000000);
-        // ArrayList faster
+
 
 
     }
