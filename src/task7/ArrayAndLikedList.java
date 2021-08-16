@@ -2,6 +2,7 @@ package task7;
 
 import task3.Sets;
 
+import javax.swing.text.html.HTMLDocument;
 import java.util.*;
 
 public class ArrayAndLikedList {
@@ -10,16 +11,12 @@ public class ArrayAndLikedList {
     private List<String> LList = new LinkedList<>(Sets.names(3));
     private ListIterator<String> LListIterator = LList.listIterator();
     private ListIterator<String> AListIterator = AList.listIterator();
-    private Iterator<String> AIterator = AList.iterator();
-    private Iterator<String> LIterator = LList.iterator();
+
 
     public void printList() {
-        while (AIterator.hasNext()) {
-            System.out.println(AIterator.next());
-        }
-        while (LIterator.hasNext()) {
-            System.out.println(LIterator.next());
-        }
+        iterator(AList.iterator());
+
+        iterator(LList.iterator());
     }
 
 
@@ -47,4 +44,14 @@ public class ArrayAndLikedList {
     public List<String> getLList() {
         return LList;
     }
+
+
+    private static void iterator(Iterator<?> iterator) {
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+
+
 }
+
