@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class ClassWithPQueue implements Comparable<ClassWithPQueue> {
     private Integer integer = new Random().nextInt(100);
-    private PriorityQueue<ClassWithPQueue> integers = new PriorityQueue<>();
+    private PriorityQueue integers = new PriorityQueue<>();
 
     public void fillQueue(int n) {
         for (int i = 0; i < n; i++) {
@@ -23,7 +23,7 @@ public class ClassWithPQueue implements Comparable<ClassWithPQueue> {
         return integer.toString();
     }
 
-    public PriorityQueue<ClassWithPQueue> getIntegers() {
+    public PriorityQueue getIntegers() {
         return integers;
     }
 }
