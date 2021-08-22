@@ -45,7 +45,7 @@ public class Main {
 
         System.out.println();
 
-        arrayAndLikedList.insertAListInLList();
+        arrayAndLikedList.insertAListInlList();
 
         System.out.println(arrayAndLikedList.getAList());
         System.out.println(arrayAndLikedList.getLList());

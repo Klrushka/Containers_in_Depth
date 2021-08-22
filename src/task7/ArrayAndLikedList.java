@@ -2,47 +2,50 @@ package task7;
 
 import task3.Sets;
 
-import javax.swing.text.html.HTMLDocument;
+
 import java.util.*;
 
 public class ArrayAndLikedList {
     // I can don't use Countries.names() because I've Sets.names()
-    private List<String> AList = new ArrayList<>(Sets.names(5));
-    private List<String> LList = new LinkedList<>(Sets.names(3));
-    private ListIterator<String> LListIterator = LList.listIterator();
-    private ListIterator<String> AListIterator = AList.listIterator();
+    private List<String> aList = new ArrayList<>(Sets.names(5));
+    private List<String> lList = new LinkedList<>(Sets.names(3));
+    private ListIterator<String> lListIterator = lList.listIterator();
+    private ListIterator<String> aListIterator = aList.listIterator();
 
 
     public void printList() {
-        iterator(AList.iterator());
+        iterator(aList.iterator());
 
-        iterator(LList.iterator());
+        iterator(lList.iterator());
     }
 
 
-    public void insertAListInLList() {
+    public void insertAListInlList() {
 
-        while (AListIterator.hasNext()) {
-            LListIterator.add(AListIterator.next());
+        while (aListIterator.hasNext()) {
+            lListIterator.add(aListIterator.next());
         }
     }
 
 
     public void reverseInsert() {
 
-        while (AListIterator.hasNext()) AListIterator.next();
-        while (LListIterator.hasNext()) LListIterator.next();
-        while (AListIterator.hasPrevious()) {
-            LListIterator.add(AListIterator.previous());
+        while (aListIterator.hasNext() || lListIterator.hasNext()){
+            if (aListIterator.hasNext()) aListIterator.next();
+            if (lListIterator.hasNext()) lListIterator.next();
+        }
+
+        while (aListIterator.hasPrevious()) {
+            lListIterator.add(aListIterator.previous());
         }
     }
 
     public List<String> getAList() {
-        return AList;
+        return aList;
     }
 
     public List<String> getLList() {
-        return LList;
+        return lList;
     }
 
 
